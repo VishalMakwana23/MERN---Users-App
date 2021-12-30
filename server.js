@@ -76,11 +76,11 @@ app.listen(port, () => console.log(`server running on port 4000`));
 
 app.post("/api/updateUser", async (req, res) => {
   const id = req.body.id
-  const uname = req.body.title;
-  const pass = req.body.publisher;
-  const name = req.body.auther;
-  const age = req.body.price;
-  const updateUser = await booksModel.findOneAndUpdate(
+  const uname = req.body.username;
+  const pass = req.body.password;
+  const name = req.body.name;
+  const age = req.body.age;
+  const updateUser = await userModel.findOneAndUpdate(
       { _id: id },
       { username: uname,
        password: pass,
