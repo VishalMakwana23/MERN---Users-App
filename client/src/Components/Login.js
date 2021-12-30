@@ -16,8 +16,6 @@ const Login = ( { setLoginUser } ) => {
         });
     };
 
-
-
     
     const user = {
         username: "",
@@ -34,7 +32,7 @@ const Login = ( { setLoginUser } ) => {
             <button onClick={() => navigate('/register')}>Register</button><br/> */}
             <button type="submit" class="btn btn-success" style={{width: "286px",marginBottom: '4px'}}  onClick={loginUser} >Login</button>
             <div align="center">or</div>
-            <button type="submit" class="btn btn-danger" style={{width: "286px",marginBottom: '4px'}}  onClick={() => navigate('/register')} >Logout</button>
+            <button type="submit" class="btn btn-primary" style={{width: "286px",marginBottom: '4px'}}  onClick={() => navigate('/register')} >Register</button>
             
         </div>
     )

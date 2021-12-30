@@ -33,24 +33,24 @@ const Register = () => {
                 <form>
                       <div className="form-group">
                         <label >Username : </label>
-                        <input class="form-control"  placeholder="Enter Username" onChange={(e) => (user.username = e.target.value)}/>
+                        <input className="form-control"  placeholder="Enter Username" onChange={(e) => (user.username = e.target.value)}/>
                       </div>
-                      <div class="form-group">
+                      <div className="form-group">
                         <label>Password :</label>
-                        <input  class="form-control" placeholder="Enter Password" onChange={(e) => (user.password = e.target.value)}/>
+                        <input  className="form-control" placeholder="Enter Password" onChange={(e) => (user.password = e.target.value)}/>
                       </div>
-                      <div class="form-group">
+                      <div className="form-group">
                         <label>Name :</label>
-                        <input  class="form-control" placeholder="Enter Name" onChange={(e) => (user.name = e.target.value)}/>
+                        <input  className="form-control" placeholder="Enter Name" onChange={(e) => (user.name = e.target.value)}/>
                       </div>
-                      <div class="form-group">
+                      <div className="form-group">
                         <label>Age :</label>
-                        <input  class="form-control" placeholder="Enter Age" onChange={(e) => (user.age = e.target.value)}/>
+                        <input  className="form-control" placeholder="Enter Age" onChange={(e) => (user.age = e.target.value)}/>
                       </div>
                       <p></p>
-                      <button type="submit" class="btn btn-primary" style={{width: "252px"}} onClick={registerUsers}>Register</button>
+                      <button type="submit" className="btn btn-primary" style={{width: "252px"}} onClick={registerUsers}>Register</button>
                       <div align="center">or</div>
-                      <button type="submit" class="btn btn-primary" style={{width: "252px"}} onClick={() => navigate('/login')}>Login</button>
+                      <button type="submit" className="btn btn-primary" style={{width: "252px"}} onClick={() => navigate('/login')}>Login</button>
                 </form>
                 </div>
             </div>

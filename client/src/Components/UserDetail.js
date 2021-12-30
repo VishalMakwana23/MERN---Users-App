@@ -25,5 +25,4 @@ const UserDetail = ({ findUser,setFindUser }) => {
         </div>
     )
 }
-
 export default UserDetail

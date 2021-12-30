@@ -4,6 +4,7 @@ import Register from './Components/Register';
 import Login from './Components/Login';
 import Home from './Components/Home';
 import Find from './Components/Find';
+import Update from './Components/Update';
 import { useState, useEffect } from 'react';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import UserDetail from './Components/UserDetail';
@@ -29,6 +30,7 @@ function App() {
           />
          <Route path="/register" element={<Register/>}/>
          <Route path="/find" element={<Find setFindUser={setFindUser}/>}/>
+         <Route path="/update" element={<Update user={user} setLoginUser={setLoginUser}/>}/>
          <Route path="/userDetail" element={<UserDetail findUser={findUser} setFindUser={setFindUser}/>}/>
        </Routes>
      </Router>
