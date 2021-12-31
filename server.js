@@ -74,21 +74,18 @@ app.listen(port, () => console.log(`server running on port 4000`));
 
 //Update User
 
-app.post("/api/updateUser", async (req, res) => {
-  const id = req.body.id
-  const uname = req.body.username;
-  const pass = req.body.password;
-  const name = req.body.name;
-  const age = req.body.age;
-  const updateUser = await userModel.findOneAndUpdate(
-      { _id: id },
-      { username: uname,
-       password: pass,
-       name: name,
-       age: age},
-      {new:true}
+app.put("/api/updateuser", async (req, res) => {
+  const newUser = req.body;
+  const upduser = await userModel.findOneAndUpdate(
+    {username:newUser.username},
+    {  
+      profile:newUser.profile,
+      name: newUser.name,
+      age:newUser.age,
+      password:newUser.password
+    },
+    {new:true}
   );
-  return res.json({ data: "Profile  updated successfully",user:user });
+  return res.json({ data: "Updated successfully",upduser:upduser });
 });
-
 

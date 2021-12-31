@@ -17,6 +17,7 @@ const Register = () => {
 
   
   const user = {
+    profile: "",
     username: "",
     password: "",
     name: "",
@@ -31,6 +32,10 @@ const Register = () => {
       <div className="card" style={{width: "18rem"}}>
                 <div className="card-body">
                 <form>
+                      <div className="form-group">
+                        <label >Profile URL : </label>
+                        <input className="form-control"  placeholder="Enter Url" onChange={(e) => (user.profile = e.target.value)}/>
+                      </div>
                       <div className="form-group">
                         <label >Username : </label>
                         <input className="form-control"  placeholder="Enter Username" onChange={(e) => (user.username = e.target.value)}/>

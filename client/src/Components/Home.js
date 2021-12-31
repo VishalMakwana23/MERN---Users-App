@@ -15,9 +15,10 @@ const Home = ({user,setLoginUser}) => {
     return (
         
         <div>
-             <h1>Home Page</h1>
+   
             <div className="card" style={{width: "18rem"}}>
                 <div className="card-body">
+                <img align="center" src={user.profile} style={{ width: "75px",height: "75px",borderRadius: "50%", objectFit: "cover",marginLeft: "34%"}} className="card-img-top img-fluid" alt="..."  />
                     <h5 className="card-title">Username : {user.username}</h5>
                     <p className="card-text">Name : {user.name}</p>
                     <p className="card-text">Age : {user.age}</p>
